@@ -2,7 +2,7 @@
 - 👀 I’m interested in using generative AI and python to enhance medical writing
 - 🌱 I’m currently learning French, python
 - 💞️ I’m looking to collaborate on building an AI prompt library for medical writers
-- 📫 You can reach me at nick@medcopywriter.com
+- 📫 You can reach me at nick@medcopywriter.com / https://www.medcopywriter.com/
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: ...
 
