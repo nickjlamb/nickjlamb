@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on building an AI prompt library for medical writers
 - 📫 You can reach me at nick@medcopywriter.com / https://www.medcopywriter.com/
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: ...
+- ⚡ Fun fact: Snails can sleep for three years
 
 <!---
 nickjlamb/nickjlamb is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
