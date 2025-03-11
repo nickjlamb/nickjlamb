@@ -3,7 +3,7 @@
 - 🛡️ Creator of MedCheckr, an AI-powered compliance tool for pharma marketing and regulatory review
 - 🌱 I’m currently learning French, python, SwiftUI
 - 💞️ I’m looking to collaborate on building an GenAI projects for pharma and medcomms 
-- 📫 You can reach me at nick@medcopywriter.com / https://www.medcopywriter.com/ https://www.pharmatools.ai/
+- 📫 You can reach me at nick@medcopywriter.com / https://www.medcopywriter.com and https://www.pharmatools.ai
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: Snails can sleep for three years
 
