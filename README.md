@@ -1,13 +1,21 @@
-- 👋 Hi, I’m @nickjlamb
-- 👀 I’m interested in using generative AI and python to enhance medical writing
-- 🛡️ Creator of MedCheckr, an AI-powered compliance tool for pharma marketing and regulatory review
-- 🌱 I’m currently learning French, python, SwiftUI
-- 💞️ I’m looking to collaborate on building an GenAI projects for pharma and medcomms 
-- 📫 You can reach me at nick@medcopywriter.com / https://www.medcopywriter.com and https://www.pharmatools.ai
-- 😄 Pronouns: he/him
-- ⚡ Fun fact: Snails can sleep for three years
+# 👋 Hi, I’m Nick Lamb
 
-<!---
-nickjlamb/nickjlamb is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+I’m a creative technologist, AI consultant, and founder of [PharmaTools.AI](https://www.pharmatools.ai), where I build generative AI tools that simplify complex medical content and streamline compliance in healthcare.
+
+## 👀 What I Do
+- 🛡️ Creator of **MedCheckr** – an AI-powered tool for pharma regulatory review
+- 📱 Developer of **Patiently AI** – a Communiqué-winning iOS app for simplifying clinical notes
+- 📊 Builder of tools like **PosterLens**, **LLMentor**, and adaptive eLearning prototypes
+
+## 🌱 Currently Exploring
+- Creative GenAI interfaces like **[HushMap](https://www.pharmatools.ai/hushmap)** – a tool that helps neurodivergent people find and predict quiet, low-sensory environments nearby
+- Generative AI for real-time content creation and medical education
+- Applications of Python, SwiftUI, and Firebase in health communication
+- Using LLMs to improve health literacy and scientific storytelling
+
+## 💬 Let’s Connect
+- 📧 nick@medcopywriter.com
+- 🌐 [pharmatools.ai](https://www.pharmatools.ai) | [medcopywriter.com](https://www.medcopywriter.com)
+
+## ⚡ Fun Fact
+Snails can sleep for three years — but I haven’t rested since GPT-4 launched.
