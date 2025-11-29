@@ -57,5 +57,5 @@ AI-powered insights into complex biomarker data, explained in plain language. **
 
 - 🌐 [pharmatools.ai](https://pharmatools.ai)
 - 🌐 [medcopywriter.com](https://medcopywriter.com)
-- ✉️ nick@medcopywriter.com
+- ✉️ nick@pharmatools.ai
 - 💼 [LinkedIn](https://linkedin.com/in/nickjlamb)
