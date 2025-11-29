@@ -16,6 +16,3 @@ I’m a creative technologist, AI consultant, and founder of [PharmaTools.AI](ht
 ## 💬 Let’s Connect
 - 📧 nick@medcopywriter.com
 - 🌐 [pharmatools.ai](https://www.pharmatools.ai) | [medcopywriter.com](https://www.medcopywriter.com)
-
-## ⚡ Fun Fact
-Snails can sleep for three years — but I haven’t rested since GPT-4 launched.
