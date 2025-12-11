@@ -16,6 +16,7 @@ Transforms complex medical notes into clear, patient-friendly language.
 - Best Mobile App Awards Winner
 
 [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/patiently-ai/id6670164706)
+[![Play Store](https://img.shields.io/badge/Google_Play-34A853?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=ai.patiently.app)
 [![Web App](https://img.shields.io/badge/Web_App-2A8B7F?style=flat&logo=pwa&logoColor=white)](https://getpatiently.ai)
 
 ---
