@@ -45,6 +45,12 @@ Helps neurodivergent individuals locate sensory-friendly places nearby. Features
 ### [BiomarkerFinder](https://pharmatools.ai) — Drug Discovery
 AI-powered insights into complex biomarker data, explained in plain language. **Winner at Open Targets Hackathon.**
 
+## 📄 Publications
+
+**Lamb NJ.** Translation, not Interpretation: Rethinking Language Model Design for Healthcare. *SN Comprehensive Clinical Medicine*. 2026;8:71. [![DOI](https://img.shields.io/badge/DOI-10.1007/s42399--026--02316--9-blue)](https://doi.org/10.1007/s42399-026-02316-9) [![Open Access](https://img.shields.io/badge/Open_Access-CC_BY_4.0-green)](https://doi.org/10.1007/s42399-026-02316-9)
+
+> Proposes that constraining LLMs to translational tasks — restructuring information across clinical, scientific, regulatory and patient-facing domains — rather than interpretive roles may reduce risk and improve accountability in healthcare AI.
+
 ## 🛠 Tech Stack
 
 ![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white)
