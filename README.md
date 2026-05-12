@@ -21,6 +21,13 @@ Transforms complex medical notes into clear, patient-friendly language.
 
 ---
 
+### [RefCheckr](https://refcheckr.pharmatools.ai) — Medical Writing
+Verifies clinical claims against supporting references from PubMed, ClinicalTrials.gov and DailyMed. Generates highlighted PDF exports for medical writers and MLR reviewers.
+
+[![Web App](https://img.shields.io/badge/Web_App-2A8B7F?style=flat&logo=pwa&logoColor=white)](https://refcheckr.pharmatools.ai)
+
+---
+
 ### [MedCheckr ABPI](https://pharmatools.ai) — Compliance
 AI-powered regulatory review tool that checks promotional claims against the ABPI Code of Practice with clause-level transparency.
 
