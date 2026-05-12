@@ -25,6 +25,7 @@ Transforms complex medical notes into clear, patient-friendly language.
 Verifies clinical claims against supporting references from PubMed, ClinicalTrials.gov and DailyMed. Generates highlighted PDF exports for medical writers and MLR reviewers.
 
 [![Web App](https://img.shields.io/badge/Web_App-2A8B7F?style=flat&logo=pwa&logoColor=white)](https://refcheckr.pharmatools.ai)
+[![Word Add-in](https://img.shields.io/badge/Word_Add--in-2B579A?style=flat&logo=microsoftword&logoColor=white)](https://marketplace.microsoft.com/en-us/product/WA200010362?tab=Overview)
 
 ---
 
