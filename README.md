@@ -1,8 +1,15 @@
 # Hi, I'm Nick Lamb 👋
 
-**Applied AI engineer** building LLM systems for healthcare — clinical writing, regulatory review, patient communication.
+***I build AI systems that verify before they generate.***
 
-Particularly interested in *constraining* model behaviour to reduce harm in high-stakes domains (the subject of my recent publication, below). Founder of [PharmaTools.AI](https://pharmatools.ai), a suite of production AI tools used by clinicians, medical writers, and patients.
+**Applied AI engineer** working on LLM systems for healthcare — verification, regulatory review, patient communication. Particularly interested in constraining model behaviour to reduce harm in high-stakes domains (the subject of my recent publication, below). Founder of [PharmaTools.AI](https://pharmatools.ai), a suite of production AI tools used by clinicians, medical writers, and patients.
+
+## 🧭 How I think about AI
+
+- Retrieve evidence rather than invent it
+- Expose uncertainty rather than conceal it
+- Constrain capability where consequences are high
+- Help humans audit reasoning, not replace judgement
 
 ## 📄 Research
 
@@ -16,11 +23,7 @@ Particularly interested in *constraining* model behaviour to reduce harm in high
 Transforms complex medical notes into clear, patient-friendly language.
 **Approach:** constrained translation prompting with reading-level targets; constraints prevent over-simplification and hallucinated reassurance.
 
-**5× Award Winner:**
-- PMEA Awards 2025 (Innovation & Patient Education)
-- Communiqué Awards 2025 Progress Award
-- HTN AI & Data Awards 2025 Highly Commended
-- Best Mobile App Awards Winner
+**5× Award Winner** — PMEA 2025 (Innovation & Patient Education), Communiqué 2025 Progress Award, HTN AI & Data 2025 (Highly Commended), Best Mobile App Awards.
 
 [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/patiently-ai/id6670164706)
 [![Play Store](https://img.shields.io/badge/Google_Play-34A853?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=ai.patiently.app)
@@ -67,7 +70,7 @@ Helps neurodivergent individuals locate sensory-friendly places nearby. Communit
 ## 🔧 Open Source
 
 ### [PubCrawl](https://github.com/nickjlamb/pubcrawl) — MCP server for biomedical literature
-TypeScript MCP server giving LLM clients direct access to PubMed, ClinicalTrials.gov, FDA DailyMed (USPI), and the UK eMC (SmPC) — including a side-by-side US/UK label comparison tool. Powers retrieval in RefCheckr. Published to npm as `@pharmatools/pubcrawl`.
+TypeScript MCP server giving LLM clients direct access to PubMed, ClinicalTrials.gov, FDA DailyMed (USPI), and the UK eMC (SmPC) — including a side-by-side US/UK label comparison tool. Built so models retrieve and reason over real biomedical literature rather than rely on parametric memory. Powers retrieval in RefCheckr; published to npm as `@pharmatools/pubcrawl`.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/pubcrawl)
 [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/package/@pharmatools/pubcrawl)
