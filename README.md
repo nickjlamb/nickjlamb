@@ -17,6 +17,10 @@
 
 > Argues that LLMs in healthcare should be **constrained to translational tasks** — restructuring information across clinical, scientific, regulatory and patient-facing domains — rather than performing open-ended interpretation. A scoping argument aligned with capability-control approaches to AI safety: narrower model surface, clearer accountability, lower harm ceiling.
 
+**Lamb NJ.** *Validation of an AI-powered mobile application for personalizing medical note explanations.* medRxiv, 2025. [![DOI](https://img.shields.io/badge/DOI-10.1101/2025.09.17.25335707-orange)](https://doi.org/10.1101/2025.09.17.25335707) [![Preprint](https://img.shields.io/badge/Preprint-medRxiv-B61F1F)](https://www.medrxiv.org/content/10.1101/2025.09.17.25335707v1)
+
+> A three-phase validation of Patiently AI — computational readability metrics across 210 outputs, expert review by 15 clinicians, and a 54-patient survey — finding **87.3% of outputs rated clinically safe**, **70% patient preference** over standard notes, and Flesch–Kincaid grade level reduced by ~3. Empirical evidence for the "translation, not interpretation" thesis above, applied in a shipped product.
+
 ## 🏆 Featured Products
 
 ### [Patiently AI](https://getpatiently.ai) — Patient Communication
