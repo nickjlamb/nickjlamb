@@ -38,7 +38,7 @@ Verifies clinical claims against supporting references for medical writers and M
 ---
 
 ### [MedCheckr](https://pharmatools.ai) — Regulatory Compliance
-AI-powered regulatory review tool that checks promotional claims against the ABPI Code of Practice with clause-level transparency.
+AI-powered regulatory review tool that checks promotional claims against the ABPI Code of Practice with clause-level transparency. **Code Clarity Awards Winner, 2024.**
 **Approach:** RAG over the ABPI Code corpus with Pinecone vector embeddings; every finding cites the specific clause(s) it relies on, so reviewers can audit each decision.
 
 [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/medcheckr-abpi/id6737439961)
