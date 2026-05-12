@@ -33,7 +33,19 @@ Transforms complex medical notes into clear, patient-friendly language.
 
 ### [RefCheckr](https://refcheckr.pharmatools.ai) — Medical Writing
 Verifies clinical claims against supporting references for medical writers and MLR reviewers.
-**Approach:** claim extraction → retrieval across PubMed, ClinicalTrials.gov and DailyMed → LLM verification with span-level citations → annotated PDF export. OCR fallback for scanned references.
+**Approach:** the user's draft claim is judged against each reference by an LLM that must cite verbatim passages; a post-hoc integrity check rejects any citation that can't be located in the source PDF (hallucinated quotes get the verdict downgraded). References can be uploaded PDFs (with OCR fallback) or fetched live from PubMed / ClinicalTrials.gov / DailyMed. Output is an annotated PDF with colour-coded highlights.
+
+```mermaid
+flowchart TD
+    A[Draft claim] --> V
+    B["References — uploads, library,<br/>or live search via PubCrawl MCP"] --> X[PDF text extraction<br/>OCR fallback for scans]
+    X --> V[Per-reference LLM verification<br/>judges claim against full source text]
+    V --> O[Verdict + confidence +<br/>quoted passages with PDF locations]
+    O --> G{Can each quote be matched<br/>in the source PDF?}
+    G -- no --> D[Downgrade verdict<br/>hallucinated quotes rejected]
+    G -- yes --> P[Annotated PDF<br/>colour-coded highlights]
+    D --> P
+```
 
 [![Web App](https://img.shields.io/badge/Web_App-2A8B7F?style=flat&logo=pwa&logoColor=white)](https://refcheckr.pharmatools.ai)
 [![Word Add-in](https://img.shields.io/badge/Word_Add--in-2B579A?style=flat&logo=microsoftword&logoColor=white)](https://marketplace.microsoft.com/en-us/product/WA200010362?tab=Overview)
