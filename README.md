@@ -118,4 +118,4 @@ A computer-vision pipeline that detects RSI risk and *improves its own detection
 - 🌐 [pharmatools.ai](https://pharmatools.ai)
 - 🌐 [medcopywriter.com](https://medcopywriter.com)
 - ✉️ nick@pharmatools.ai
-- 💼 [LinkedIn](https://linkedin.com/in/nickjlamb)
+- 💼 [LinkedIn](https://www.linkedin.com/in/medcopywriter/)
