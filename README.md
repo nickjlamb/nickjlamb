@@ -86,10 +86,11 @@ Helps neurodivergent individuals locate sensory-friendly places nearby. Communit
 ## 🔧 Open Source
 
 ### [PubCrawl](https://github.com/nickjlamb/pubcrawl) — MCP server for biomedical literature
-TypeScript MCP server giving LLM clients direct access to PubMed, ClinicalTrials.gov, FDA DailyMed (USPI), and the UK eMC (SmPC) — including a side-by-side US/UK label comparison tool. Built so models retrieve and reason over real biomedical literature rather than rely on parametric memory. Powers retrieval in RefCheckr; published to npm as `@pharmatools/pubcrawl`.
+TypeScript MCP server giving LLM clients direct access to PubMed, ClinicalTrials.gov, FDA DailyMed (USPI), and the UK eMC (SmPC) — including a side-by-side US/UK label comparison tool. Built so models retrieve and reason over real biomedical literature rather than rely on parametric memory. Powers retrieval in RefCheckr; published to npm as `@pharmatools/pubcrawl`, and listed in the official MCP registry.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/pubcrawl)
 [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/package/@pharmatools/pubcrawl)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-6E56CF?style=flat)](https://registry.modelcontextprotocol.io/?q=pubcrawl)
 
 ---
 
