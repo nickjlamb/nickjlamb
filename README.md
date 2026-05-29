@@ -25,7 +25,16 @@
 
 ### [Patiently AI](https://getpatiently.ai) — Patient Communication
 Transforms complex medical notes into clear, patient-friendly language.
-**Approach:** constrained translation prompting with reading-level targets; constraints prevent over-simplification and hallucinated reassurance.
+**Approach:** constrained simplification to a target audience and reading level, gated so the model stays in *translation* — restating what the note already says, never crossing into diagnosis or new clinical interpretation.
+
+```mermaid
+flowchart TD
+    A["Source medical note"] --> T["Constrained simplification<br/>to target audience + reading level"]
+    Au["Audience — patient / carer / clinician"] --> T
+    T --> G{"Translation only?<br/>no new diagnosis or<br/>clinical interpretation added"}
+    G -- no --> T
+    G -- yes --> O["Audience-appropriate explanation<br/>same clinical facts, clearer language"]
+```
 
 **5× Award Winner** — PMEA 2025 (Innovation & Patient Education), Communiqué 2025 Progress Award, HTN AI & Data 2025 (Highly Commended), Best Mobile App Awards.
 
@@ -96,6 +105,18 @@ TypeScript MCP server giving LLM clients direct access to PubMed, ClinicalTrials
 
 ### [RSI Loop](https://github.com/nickjlamb/rsi-loop) — Validated self-improving detector
 A computer-vision pipeline that detects RSI risk and *improves its own detection logic* against a benchmark suite — but is gated by a separate regulatory Auditor that rejects mutations producing test-passing but clinically implausible thresholds. A concrete miniature of specification-gaming / reward-hacking mitigation: optimise freely, accept only iterations that are *simultaneously* accurate **and** within published clinical norms.
+
+```mermaid
+flowchart TD
+    A["Webcam pose + hand landmarks"] --> D["RSI-risk detector vN"]
+    D --> E["Score against benchmark suite"]
+    E --> I["Self-improvement proposes vN+1<br/>new thresholds / logic"]
+    I --> G{"Auditor: accurate on benchmark<br/>AND within published clinical norms?"}
+    G -- no --> R["Reject mutation<br/>specification-gaming blocked"]
+    R --> I
+    G -- yes --> N["Accept vN+1 as new baseline"]
+    N --> D
+```
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/rsi-loop)
 
