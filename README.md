@@ -29,11 +29,15 @@ Transforms complex medical notes into clear, patient-friendly language.
 
 ```mermaid
 flowchart TD
-    A["Source medical note"] --> T["Constrained simplification<br/>to target audience + reading level"]
-    Au["Audience — patient / carer / clinician"] --> T
-    T --> G{"Translation only?<br/>no new diagnosis or<br/>clinical interpretation added"}
-    G -- no --> T
-    G -- yes --> O["Audience-appropriate explanation<br/>same clinical facts, clearer language"]
+    A["Medical note<br/>(typed, uploaded, scanned or dictated)"] --> T
+
+    U["User preferences<br/>Audience + reading level + language + tone"] --> T
+
+    T["AI transformation<br/>Simplifies and explains medical language<br/>while preserving clinical meaning"] --> S
+
+    S{"Safety guardrails<br/>No diagnosis, no new clinical facts,<br/>no medical interpretation added"}
+
+    S --> O["Clear, audience-appropriate explanation<br/>Same clinical information, easier to understand"]
 ```
 
 **5× Award Winner** — PMEA 2025 (Innovation & Patient Education), Communiqué 2025 Progress Award, HTN AI & Data 2025 (Highly Commended), Best Mobile App Awards.
