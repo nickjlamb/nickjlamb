@@ -124,6 +124,27 @@ flowchart TD
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/rsi-loop)
 
+---
+
+### [LitRAG](https://github.com/nickjlamb/litrag) — Grounded RAG with a built-in citation-faithfulness eval
+A small, readable RAG pipeline over PubMed abstracts that doesn't stop at "it retrieved something and answered" — it **checks whether each generated claim is actually supported by its cited source**, and flags hallucinated or unsupported ones. A deterministic quote-locator catches fabricated citations for free; an LLM-as-judge then grades support level (supports / partial / contradicts / not-found) from the passage alone. Embedding and retrieval run fully local (Hugging Face sentence-transformers + FAISS — no managed vector-DB key); only generation and the judge call an LLM. It's the citation-faithfulness pattern behind RefCheckr, distilled into an open reference implementation, with its corpus pulled via PubCrawl.
+
+```mermaid
+flowchart TD
+    Q[Question] --> R["Local retrieval<br/>sentence-transformers + FAISS"]
+    R --> G["LangChain RAG chain<br/>answer + verbatim cited quote per claim"]
+    G --> L{"Quote locatable in source?<br/>(deterministic — no model call)"}
+    L -- no --> H["Flag: hallucinated quote"]
+    L -- yes --> J{"LLM judge: does the passage<br/>support the claim?"}
+    J -- no --> F["Flag: unsupported / contradicted"]
+    J -- yes --> S["Grounded ✓"]
+```
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/litrag)
+[![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)](https://github.com/nickjlamb/litrag)
+[![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat&logo=huggingface&logoColor=black)](https://github.com/nickjlamb/litrag)
+[![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)](https://github.com/nickjlamb/litrag)
+
 ## 🛠 Tech Stack
 
 **LLM systems:** Claude API · MCP · RAG (Pinecone) · multimodal · structured outputs · evals
