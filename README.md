@@ -11,6 +11,21 @@
 - Constrain capability where consequences are high
 - Help humans audit reasoning, not replace judgement
 
+## 🛠 Tech Stack
+
+**LLM systems:** Claude API · MCP · RAG (Pinecone · FAISS) · multimodal · structured outputs · evals
+
+**Application:** Node.js · Python · Swift / SwiftUI · Firebase · Postgres
+
+![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?style=flat&logo=swift&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Postgres](https://img.shields.io/badge/Postgres-4169E1?style=flat&logo=postgresql&logoColor=white)
+
 ## 📄 Research
 
 **Lamb NJ.** *Translation, not Interpretation: Rethinking Language Model Design for Healthcare.* SN Comprehensive Clinical Medicine. 2026;8:71. [![DOI](https://img.shields.io/badge/DOI-10.1007/s42399--026--02316--9-blue)](https://doi.org/10.1007/s42399-026-02316-9) [![Open Access](https://img.shields.io/badge/Open_Access-CC_BY_4.0-green)](https://doi.org/10.1007/s42399-026-02316-9)
@@ -144,21 +159,6 @@ flowchart TD
 [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)](https://github.com/nickjlamb/litrag)
 [![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat&logo=huggingface&logoColor=black)](https://github.com/nickjlamb/litrag)
 [![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)](https://github.com/nickjlamb/litrag)
-
-## 🛠 Tech Stack
-
-**LLM systems:** Claude API · MCP · RAG (Pinecone) · multimodal · structured outputs · evals
-
-**Application:** Node.js · Python · Swift / SwiftUI · Firebase · Postgres
-
-![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?style=flat&logo=swift&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
-![Postgres](https://img.shields.io/badge/Postgres-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 ## 📫 Get in Touch
 
