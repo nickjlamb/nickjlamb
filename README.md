@@ -1,3 +1,9 @@
+<!--
+  Pin order (Settings → Customize your pins), lead with the verification spine:
+    1. opengate   2. pubcrawl   3. redacta   4. studydiff
+  RSI Loop and LitRAG are concept implementations — pin only if a slot is free.
+-->
+
 # Hi, I'm Nick Lamb 👋
 
 ***I build AI systems that verify before they generate.***
@@ -111,18 +117,71 @@ Helps neurodivergent individuals locate sensory-friendly places nearby. Communit
 
 [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/hushmap/id6742574192)
 
-## 🔧 Open Source
+## 🔧 Open Source — one verification standard, four production tools
+
+The consumer products above are underpinned by an open-source spine: **[OpenGATE](https://github.com/nickjlamb/opengate)**, a deterministic grounding-verification standard I built, and the tools it gates. One evaluation standard, four published systems — together several thousand downloads a month, each release checked against a fidelity baseline before it ships.
+
+| Tool | What it does | Adoption |
+|------|--------------|----------|
+| **[OpenGATE](https://github.com/nickjlamb/opengate)** | Deterministic grounding verification — no LLM judge | [![opengate downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fopengate?color=cb3837&label=npm)](https://www.npmjs.com/package/@pharmatools/opengate) |
+| **[PubCrawl](https://github.com/nickjlamb/pubcrawl)** | MCP server for biomedical literature (14 tools) | [![pubcrawl downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fpubcrawl?color=cb3837&label=npm)](https://www.npmjs.com/package/@pharmatools/pubcrawl) |
+| **[Redacta](https://github.com/nickjlamb/redacta)** | De-identify clinical text before it reaches an AI | [![redacta downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fredacta?color=cb3837&label=npm)](https://www.npmjs.com/package/@pharmatools/redacta) |
+| **[StudyDiff](https://github.com/nickjlamb/studydiff)** | Explains why two studies disagree, grounded in source | [![studydiff downloads](https://img.shields.io/npm/dm/studydiff-mcp?color=cb3837&label=npm)](https://www.npmjs.com/package/studydiff-mcp) |
+
+---
+
+### [OpenGATE](https://github.com/nickjlamb/opengate) — the verification spine
+**Deterministic, gold-anchored verification for evidence-grounded AI — no LLM judge.** OpenGATE answers one question: *can a system prove its answer from the evidence it was given?* Required facts must be present, every number must trace back to source, and when the context can't answer, the system must abstain rather than fabricate. Because the check is pure logic — not a grader model — it's reproducible, free, and fast enough to run on every answer or gate on every commit. It's the pattern behind RefCheckr and Patiently AI, published as a standalone standard and wired in as a CI release gate on the tools below.
+
+> **It catches real regressions.** Wired into PubCrawl's release pipeline, OpenGATE flagged a records-shape inconsistency (an author list serialised as a string instead of an array) *before* it shipped — the kind of silent parser regression that would quietly poison every downstream grounding claim. Fixed, gated, and now green at 100% retrieval fidelity across PubMed and Europe PMC on every release.
+
+```mermaid
+flowchart LR
+    S["AI system output<br/>(RAG · doc-QA · MCP server)"] --> G{"OpenGATE<br/>facts present? numbers trace?<br/>abstains when unsupported?"}
+    G -- "pass" --> R["Ship / merge"]
+    G -- "regressed vs baseline" --> B["Block release"]
+```
+
+[![npm](https://img.shields.io/npm/v/%40pharmatools%2Fopengate?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@pharmatools/opengate)
+[![npm downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fopengate?color=cb3837)](https://www.npmjs.com/package/@pharmatools/opengate)
+[![PyPI](https://img.shields.io/pypi/v/opengate-grounding?label=PyPI&logo=pypi&logoColor=white&color=3775A9)](https://pypi.org/project/opengate-grounding/)
+[![Docker](https://img.shields.io/docker/v/pharmatools/opengate?label=Docker&logo=docker&logoColor=white&color=2496ED&sort=semver)](https://hub.docker.com/r/pharmatools/opengate)
+
+---
 
 ### [PubCrawl](https://github.com/nickjlamb/pubcrawl) — MCP server for biomedical literature
-TypeScript MCP server giving LLM clients direct access to PubMed, ClinicalTrials.gov, FDA DailyMed (USPI), and the UK eMC (SmPC) — including a side-by-side US/UK label comparison tool. Built so models retrieve and reason over real biomedical literature rather than rely on parametric memory. Powers retrieval in RefCheckr; published to npm as `@pharmatools/pubcrawl`, and listed in the official MCP registry.
+TypeScript MCP server giving LLM clients direct access to PubMed, **Europe PMC**, ClinicalTrials.gov, FDA DailyMed (USPI), and the UK eMC (SmPC) — 14 tools in all, including a side-by-side US/UK label comparison. Built so models retrieve and reason over real biomedical literature rather than rely on parametric memory. Powers retrieval in RefCheckr; **gated by OpenGATE on every release** (100% retrieval fidelity across PubMed and Europe PMC). Published to npm as `@pharmatools/pubcrawl` and listed in the official MCP registry.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/pubcrawl)
-[![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/package/@pharmatools/pubcrawl)
+[![npm](https://img.shields.io/npm/v/%40pharmatools%2Fpubcrawl?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@pharmatools/pubcrawl)
+[![npm downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fpubcrawl?color=cb3837)](https://www.npmjs.com/package/@pharmatools/pubcrawl)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-6E56CF?style=flat)](https://registry.modelcontextprotocol.io/?q=pubcrawl)
 
 ---
 
-### [RSI Loop](https://github.com/nickjlamb/rsi-loop) — Validated self-improving detector
+### [Redacta](https://github.com/nickjlamb/redacta) — de-identify clinical text before it reaches an AI
+One detection engine shipped across eight surfaces — an iOS app, an agent skill, an MCP server, TypeScript and Python libraries, a CLI, and two whiteboard plugins. It replaces patient identifiers with labelled tokens (`[PATIENT_NAME_1]`, `[NHS_NUMBER_1]`, …) while leaving the clinical meaning intact, and it works in reverse: redact → process elsewhere → re-identify locally, so real identifiers never leave your machine. Deterministic pattern-matching (Modulus-11-validated NHS numbers, NI numbers, dates, postcodes) with an optional reasoning layer for free-text names, plus a HIPAA Safe Harbor mode.
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/redacta)
+[![npm](https://img.shields.io/npm/v/%40pharmatools%2Fredacta?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@pharmatools/redacta)
+[![npm downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fredacta?color=cb3837)](https://www.npmjs.com/package/@pharmatools/redacta)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21115605.svg)](https://doi.org/10.5281/zenodo.21115605)
+
+---
+
+### [StudyDiff](https://github.com/nickjlamb/studydiff) — why two studies reach different conclusions
+Give it two papers and it extracts each one's design, surfaces the methodological differences that could explain a disagreement (a cell type, a dose, a follow-up window), and ranks the likely drivers — grounding **every** statement in the source text, so it never invents a finding. Any field the source doesn't state is shown as *not reported*, never inferred; grounding runs **first**, so a fact that can't be verified is downgraded before it's ever used as a reason. Verification is deterministic (OpenGATE) — no second LLM acting as judge. Built for the *Built with Claude: Life Sciences* hackathon; shipped as an MCP server so any agent can ask *why do these papers disagree?* as a tool call.
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/studydiff)
+[![npm](https://img.shields.io/npm/v/studydiff-mcp?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/studydiff-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/studydiff-mcp?color=cb3837)](https://www.npmjs.com/package/studydiff-mcp)
+[![Live demo](https://img.shields.io/badge/demo-studydiff.pharmatools.ai-0f766e)](https://studydiff.pharmatools.ai)
+
+---
+
+*Concept implementations — the verification patterns above, distilled into small, readable reference repos:*
+
+### [RSI Loop](https://github.com/nickjlamb/rsi-loop) — validated self-improving detector
 A computer-vision pipeline that detects RSI risk and *improves its own detection logic* against a benchmark suite — but is gated by a separate regulatory Auditor that rejects mutations producing test-passing but clinically implausible thresholds. A concrete miniature of specification-gaming / reward-hacking mitigation: optimise freely, accept only iterations that are *simultaneously* accurate **and** within published clinical norms.
 
 ```mermaid
@@ -141,7 +200,7 @@ flowchart TD
 
 ---
 
-### [LitRAG](https://github.com/nickjlamb/litrag) — Grounded RAG with a built-in citation-faithfulness eval
+### [LitRAG](https://github.com/nickjlamb/litrag) — grounded RAG with a built-in citation-faithfulness eval
 A small, readable RAG pipeline over PubMed abstracts that doesn't stop at "it retrieved something and answered" — it **checks whether each generated claim is actually supported by its cited source**, and flags hallucinated or unsupported ones. A deterministic quote-locator catches fabricated citations for free; an LLM-as-judge then grades support level (supports / partial / contradicts / not-found) from the passage alone. Embedding and retrieval run fully local (Hugging Face sentence-transformers + FAISS — no managed vector-DB key); only generation and the judge call an LLM. It's the citation-faithfulness pattern behind RefCheckr, distilled into an open reference implementation, with its corpus pulled via PubCrawl.
 
 ```mermaid
@@ -166,3 +225,5 @@ flowchart TD
 - 🌐 [medcopywriter.com](https://medcopywriter.com)
 - ✉️ nick@pharmatools.ai
 - 💼 [LinkedIn](https://www.linkedin.com/in/medcopywriter/)
+
+---
