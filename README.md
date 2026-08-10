@@ -21,7 +21,7 @@
 
 **LLM systems:** Claude API · MCP · RAG (Pinecone · FAISS) · multimodal · structured outputs · evals
 
-**Application:** Node.js · Python · Swift / SwiftUI · Firebase · Postgres
+**Application:** Node.js · Python · Swift / SwiftUI · Firebase · Postgres · Docker · Kubernetes
 
 ![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -31,6 +31,8 @@
 ![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?style=flat&logo=swift&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
 ![Postgres](https://img.shields.io/badge/Postgres-4169E1?style=flat&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 
 ## 📄 Research
 
@@ -160,12 +162,13 @@ TypeScript MCP server giving LLM clients direct access to PubMed, **Europe PMC**
 ---
 
 ### [Redacta](https://github.com/nickjlamb/redacta) — de-identify clinical text before it reaches an AI
-One detection engine shipped across eight surfaces — an iOS app, an agent skill, an MCP server, TypeScript and Python libraries, a CLI, and two whiteboard plugins. It replaces patient identifiers with labelled tokens (`[PATIENT_NAME_1]`, `[NHS_NUMBER_1]`, …) while leaving the clinical meaning intact, and it works in reverse: redact → process elsewhere → re-identify locally, so real identifiers never leave your machine. Deterministic pattern-matching (Modulus-11-validated NHS numbers, NI numbers, dates, postcodes) with an optional reasoning layer for free-text names, plus a HIPAA Safe Harbor mode.
+One detection engine shipped across nine surfaces — an iOS app, an agent skill, an MCP server, TypeScript and Python libraries, a CLI, two whiteboard plugins, and a self-hosted HTTP service with a plain-YAML Kubernetes deployment, so the privacy boundary can run inside an organisation's own cluster. It replaces patient identifiers with labelled tokens (`[PATIENT_NAME_1]`, `[NHS_NUMBER_1]`, …) while leaving the clinical meaning intact, and it works in reverse: redact → process elsewhere → re-identify locally, so real identifiers never leave your machine. Deterministic pattern-matching (Modulus-11-validated NHS numbers, NI numbers, dates, postcodes) with an optional reasoning layer for free-text names, plus a HIPAA Safe Harbor mode.
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/redacta)
 [![npm](https://img.shields.io/npm/v/%40pharmatools%2Fredacta?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@pharmatools/redacta)
 [![npm downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fredacta?color=cb3837)](https://www.npmjs.com/package/@pharmatools/redacta)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21115605.svg)](https://doi.org/10.5281/zenodo.21115605)
+[![self-hosted](https://img.shields.io/badge/self--hosted-Kubernetes-326CE5?logo=kubernetes&logoColor=white)](https://github.com/nickjlamb/redacta/blob/main/gateway-service/k8s/README.md)
 
 ---
 
