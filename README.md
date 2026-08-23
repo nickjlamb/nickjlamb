@@ -21,23 +21,15 @@
 - Constrain capability where consequences are high
 - Help humans audit reasoning, not replace judgement
 
+## 🛡 The safety thread
+
+The question connecting this work: **how do you keep an AI system inside the envelope where it can be trusted?** My [published position](https://doi.org/10.1007/s42399-026-02316-9) argues for capability control — constraining healthcare LLMs to translation rather than open-ended interpretation, for a narrower surface and a lower harm ceiling. [OpenGATE](https://github.com/nickjlamb/opengate) takes the LLM-as-judge out of evaluation entirely: grounding verification as pure logic, reproducible and ungameable by a persuasive answer. [RSI Loop](https://github.com/nickjlamb/rsi-loop) is a working miniature of specification-gaming mitigation — an optimiser free to mutate, and an auditor that rejects reward-hacked thresholds the benchmark alone would accept. And [redacta-mcp](https://github.com/nickjlamb/redacta) treats agent context as a privacy boundary, keeping re-identification maps out of the model's reach by construction. Different domains, one principle: don't ask the model to police itself.
+
 ## 🛠 Tech Stack
 
 **LLM systems:** Claude API · MCP · RAG (Pinecone · FAISS) · multimodal · structured outputs · evals
 
 **Application:** TypeScript · Node.js · Python · Swift / SwiftUI · Firebase · Postgres · Docker · Kubernetes
-
-![Claude API](https://img.shields.io/badge/Claude_API-191919?style=flat&logo=anthropic&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?style=flat&logo=swift&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
-![Postgres](https://img.shields.io/badge/Postgres-4169E1?style=flat&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 
 ## 📄 Research
 
@@ -150,32 +142,14 @@ Verifies clinical claims against supporting references for medical writers and M
 
 ---
 
-### [MedCheckr](https://pharmatools.ai) — Regulatory Compliance
-AI-powered regulatory review tool that checks promotional claims against the ABPI Code of Practice with clause-level transparency. **Code Clarity Awards Winner, 2024.**
-**Approach:** RAG over the ABPI Code corpus with Pinecone vector embeddings; every finding cites the specific clause(s) it relies on, so reviewers can audit each decision.
+### Also shipped
 
-[![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/medcheckr-abpi/id6737439961)
-
----
-
-### [PosterLens](https://pharmatools.ai) — Research
-Captures scientific posters and generates instant AI summaries. Presented at ESMO AI & Digital Oncology Congress 2025.
-**Approach:** mobile vision capture → multimodal LLM extraction into a structured schema (study design, endpoints, results, limitations).
-
-[![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/posterlens/id6744457926)
-
----
-
-### [BiomarkerFinder](https://pharmatools.ai) — Drug Discovery
-AI-powered insights into complex biomarker data, explained in plain language. **Winner at Open Targets Hackathon.**
-**Approach:** pulls structured biomarker associations from Open Targets and translates them into plain-language explanations with provenance back to the underlying datasets.
-
----
-
-### [HushMap](https://pharmatools.ai) — Wellbeing
-Helps neurodivergent individuals locate sensory-friendly places nearby. Community contributions and Apple Watch support.
-
-[![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/hushmap/id6742574192)
+| Product | Domain | Of note |
+|---|---|---|
+| **[MedCheckr](https://apps.apple.com/app/medcheckr-abpi/id6737439961)** | ABPI regulatory review | **Code Clarity Awards Winner 2024** — RAG over the ABPI Code with clause-level citations, so every finding is auditable |
+| **[PosterLens](https://apps.apple.com/app/posterlens/id6744457926)** | Scientific posters | Presented at **ESMO AI & Digital Oncology Congress 2025** — on-device OCR, structured extraction, PubMed-validated citations |
+| **[BiomarkerFinder](https://pharmatools.ai)** | Drug discovery | **Open Targets Hackathon winner** — biomarker associations translated to plain language with provenance |
+| **[HushMap](https://apps.apple.com/app/hushmap/id6742574192)** | Wellbeing | Sensory-friendly place finder for neurodivergent users — community contributions, Apple Watch |
 
 ## 📫 Get in Touch
 
