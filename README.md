@@ -53,6 +53,11 @@
 
 The consumer products further down are underpinned by an open-source spine: **[OpenGATE](https://github.com/nickjlamb/opengate)**, a deterministic grounding-verification standard I built, and the tools it gates. One evaluation standard, four published systems — together several thousand downloads a month, each release checked against a fidelity baseline before it ships.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/spine-dark.svg">
+  <img src="docs/spine-light.svg" alt="The verification spine: OpenGATE — deterministic, gold-anchored verification with no LLM judge — gates PubCrawl, Redacta and StudyDiff on every release; the same verification pattern is shipped in RefCheckr and Patiently AI and distilled into the LitRAG and RSI Loop reference repos." width="100%">
+</picture>
+
 | Tool | What it does | Adoption |
 |------|--------------|----------|
 | **[OpenGATE](https://github.com/nickjlamb/opengate)** | Deterministic grounding verification — no LLM judge | [![opengate downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fopengate?color=cb3837&label=npm)](https://www.npmjs.com/package/@pharmatools/opengate) |
@@ -66,13 +71,6 @@ The consumer products further down are underpinned by an open-source spine: **[O
 **Deterministic, gold-anchored verification for evidence-grounded AI — no LLM judge.** OpenGATE answers one question: *can a system prove its answer from the evidence it was given?* Required facts must be present, every number must trace back to source, and when the context can't answer, the system must abstain rather than fabricate. Because the check is pure logic — not a grader model — it's reproducible, free, and fast enough to run on every answer or gate on every commit. It's the pattern behind RefCheckr and Patiently AI, published as a standalone standard and wired in as a CI release gate on the tools below.
 
 > **It catches real regressions.** Wired into PubCrawl's release pipeline, OpenGATE flagged a records-shape inconsistency (an author list serialised as a string instead of an array) *before* it shipped — the kind of silent parser regression that would quietly poison every downstream grounding claim. Fixed, gated, and now green at 100% retrieval fidelity across PubMed and Europe PMC on every release.
-
-```mermaid
-flowchart LR
-    S["AI system output<br/>(RAG · doc-QA · MCP server)"] --> G{"OpenGATE<br/>facts present? numbers trace?<br/>abstains when unsupported?"}
-    G -- "pass" --> R["Ship / merge"]
-    G -- "regressed vs baseline" --> B["Block release"]
-```
 
 [![npm](https://img.shields.io/npm/v/%40pharmatools%2Fopengate?label=npm&logo=npm&color=cb3837)](https://www.npmjs.com/package/@pharmatools/opengate)
 [![npm downloads](https://img.shields.io/npm/dm/%40pharmatools%2Fopengate?color=cb3837)](https://www.npmjs.com/package/@pharmatools/opengate)
@@ -117,35 +115,12 @@ Give it two papers and it extracts each one's design, surfaces the methodologica
 ### [RSI Loop](https://github.com/nickjlamb/rsi-loop) — validated self-improving detector
 A computer-vision pipeline that detects RSI risk and *improves its own detection logic* against a benchmark suite — but is gated by a separate regulatory Auditor that rejects mutations producing test-passing but clinically implausible thresholds. A concrete miniature of specification-gaming / reward-hacking mitigation: optimise freely, accept only iterations that are *simultaneously* accurate **and** within published clinical norms.
 
-```mermaid
-flowchart TD
-    A["Webcam pose + hand landmarks"] --> D["RSI-risk detector vN"]
-    D --> E["Score against benchmark suite"]
-    E --> I["Self-improvement proposes vN+1<br/>new thresholds / logic"]
-    I --> G{"Auditor: accurate on benchmark<br/>AND within published clinical norms?"}
-    G -- no --> R["Reject mutation<br/>specification-gaming blocked"]
-    R --> I
-    G -- yes --> N["Accept vN+1 as new baseline"]
-    N --> D
-```
-
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/rsi-loop)
 
 ---
 
 ### [LitRAG](https://github.com/nickjlamb/litrag) — grounded RAG with a built-in citation-faithfulness eval
 A small, readable RAG pipeline over PubMed abstracts that doesn't stop at "it retrieved something and answered" — it **checks whether each generated claim is actually supported by its cited source**, and flags hallucinated or unsupported ones. A deterministic quote-locator catches fabricated citations for free; an LLM-as-judge then grades support level (supports / partial / contradicts / not-found) from the passage alone. Embedding and retrieval run fully local (Hugging Face sentence-transformers + FAISS — no managed vector-DB key); only generation and the judge call an LLM. It's the citation-faithfulness pattern behind RefCheckr, distilled into an open reference implementation, with its corpus pulled via PubCrawl.
-
-```mermaid
-flowchart TD
-    Q[Question] --> R["Local retrieval<br/>sentence-transformers + FAISS"]
-    R --> G["LangChain RAG chain<br/>answer + verbatim cited quote per claim"]
-    G --> L{"Quote locatable in source?<br/>(deterministic — no model call)"}
-    L -- no --> H["Flag: hallucinated quote"]
-    L -- yes --> J{"LLM judge: does the passage<br/>support the claim?"}
-    J -- no --> F["Flag: unsupported / contradicted"]
-    J -- yes --> S["Grounded ✓"]
-```
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nickjlamb/litrag)
 [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)](https://github.com/nickjlamb/litrag)

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="The verification spine: OpenGATE, a deterministic gold-anchored verification standard with no LLM judge, gates PubCrawl, Redacta and StudyDiff on every release — baseline fidelity or the release blocks. The same verification pattern is shipped in RefCheckr and Patiently AI and distilled into the LitRAG and RSI Loop reference repos.">
+<defs><marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker><marker id="arr-mut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/></marker></defs>
+<rect x="16" y="52" width="250" height="400" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<text x="34" y="78" font-size="11" font-weight="600" letter-spacing="1.5" fill="#59636e">THE STANDARD</text>
+<rect x="34.0" y="150" width="214" height="64" rx="8" fill="#fbf0ff" stroke="#8250df"/>
+<text x="141" y="172" font-size="13" font-weight="600" text-anchor="middle" fill="#8250df">OpenGATE</text>
+<text x="141" y="190" font-size="11" text-anchor="middle" fill="#59636e">gold-anchored &#183; no LLM judge</text>
+<text x="34" y="434" font-size="11" font-style="italic" fill="#59636e">evals measure &#8212; this verifies</text>
+<rect x="296" y="52" width="648" height="190" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<text x="314" y="78" font-size="11" font-weight="600" letter-spacing="1.5" fill="#59636e">GATED ON EVERY RELEASE</text>
+<polyline points="248,174 272,174 272,102 815,102" fill="none" stroke="#1a7f37" stroke-width="1.5"/>
+<line x1="405" y1="102" x2="405" y2="126" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="610" y1="102" x2="610" y2="126" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<line x1="815" y1="102" x2="815" y2="126" stroke="#1a7f37" stroke-width="1.5" marker-end="url(#arr-green)"/>
+<text x="545" y="94" font-size="11" font-weight="600" fill="#1a7f37" text-anchor="middle">CI release gate &#8212; baseline fidelity or the release blocks</text>
+<rect x="310.0" y="130" width="190" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="405" y="152" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">PubCrawl</text>
+<text x="405" y="170" font-size="11" text-anchor="middle" fill="#59636e">literature MCP &#183; 14 tools</text>
+<rect x="515.0" y="130" width="190" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="610" y="152" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">Redacta</text>
+<text x="610" y="170" font-size="11" text-anchor="middle" fill="#59636e">clinical de-identification</text>
+<rect x="720.0" y="130" width="190" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="815" y="152" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">StudyDiff</text>
+<text x="815" y="170" font-size="11" text-anchor="middle" fill="#59636e">why studies disagree</text>
+<rect x="296" y="272" width="648" height="180" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>
+<text x="314" y="298" font-size="11" font-weight="600" letter-spacing="1.5" fill="#59636e">THE SAME PATTERN, ELSEWHERE</text>
+<polyline points="141,214 141,318 854,318" fill="none" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="386" y1="318" x2="386" y2="344" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mut)"/>
+<line x1="542" y1="318" x2="542" y2="344" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mut)"/>
+<line x1="698" y1="318" x2="698" y2="344" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mut)"/>
+<line x1="854" y1="318" x2="854" y2="344" stroke="#8c959f" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr-mut)"/>
+<text x="620" y="310" font-size="11" fill="#59636e" text-anchor="middle">the same verification pattern</text>
+<rect x="312.0" y="348" width="148" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="386" y="370" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">RefCheckr</text>
+<text x="386" y="388" font-size="11" text-anchor="middle" fill="#59636e">claim vs reference</text>
+<rect x="468.0" y="348" width="148" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="542" y="370" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">Patiently AI</text>
+<text x="542" y="388" font-size="11" text-anchor="middle" fill="#59636e">constrained simplification</text>
+<rect x="624.0" y="348" width="148" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="698" y="370" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">LitRAG</text>
+<text x="698" y="388" font-size="11" text-anchor="middle" fill="#59636e">citation faithfulness</text>
+<rect x="780.0" y="348" width="148" height="52" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="854" y="370" font-size="13" font-weight="600" text-anchor="middle" fill="#1f2328">RSI Loop</text>
+<text x="854" y="388" font-size="11" text-anchor="middle" fill="#59636e">validated self-improvement</text>
+<text x="464" y="428" font-size="10.5" font-style="italic" fill="#59636e" text-anchor="middle">shipped products</text>
+<text x="776" y="428" font-size="10.5" font-style="italic" fill="#59636e" text-anchor="middle">reference repos</text>
+</svg>
