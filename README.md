@@ -8,11 +8,11 @@
 
 ***I build AI systems that verify before they generate.***
 
-**Applied AI engineer** working on LLM systems for healthcare — verification, regulatory review, patient communication. Particularly interested in constraining model behaviour to reduce harm in high-stakes domains (the subject of my recent publication, below). Founder of [PharmaTools.AI](https://pharmatools.ai), a suite of production AI tools used by clinicians, medical writers, and patients.
+**Applied AI engineer** working on LLM systems for healthcare — verification, regulatory review, patient communication. Particularly interested in constraining model behaviour to reduce harm in high-stakes domains (the subject of my recent publications, below). Founder of [PharmaTools.AI](https://pharmatools.ai), a suite of production AI tools used by clinicians, medical writers, and patients.
 
-**Highlights:** built a deterministic verification standard ([OpenGATE](https://github.com/nickjlamb/opengate)) · 3,000+ downloads/month across the open-source suite · 2 connectors in [Anthropic's MCP Directory](https://claude.ai/directory/connectors/ant.dir.gh.nickjlamb.redacta) · peer-reviewed publication on capability-constrained LLMs · self-hosted Kubernetes deployment for clinical-text privacy
+**Highlights:** built a deterministic verification standard ([OpenGATE](https://github.com/nickjlamb/opengate)) · 3,000+ downloads/month across the open-source suite · 2 connectors in [Anthropic's MCP Directory](https://claude.ai/directory/connectors/ant.dir.gh.nickjlamb.redacta) · peer-reviewed publications on capability-constrained LLMs (SN Comprehensive Clinical Medicine) and their clinical validation (Frontiers in Digital Health) · self-hosted Kubernetes deployment for clinical-text privacy
 
-**Recently:** *Translation, not Interpretation* published in SN Comprehensive Clinical Medicine (2026) · `redacta-mcp` v2 — a stateful privacy boundary that keeps reversal maps out of agent context · a self-hosted Kubernetes deployment for Redacta (Aug 2026)
+**Recently:** Patiently AI validation study published in Frontiers in Digital Health (Aug 2026) · *Translation, not Interpretation* published in SN Comprehensive Clinical Medicine (2026) · `redacta-mcp` v2 — a stateful privacy boundary that keeps reversal maps out of agent context · a self-hosted Kubernetes deployment for Redacta (Aug 2026)
 
 ## 🧭 How I think about AI
 
@@ -41,9 +41,9 @@ The question connecting this work: **how do you keep an AI system inside the env
 
 > Argues that LLMs in healthcare should be **constrained to translational tasks** — restructuring information across clinical, scientific, regulatory and patient-facing domains — rather than performing open-ended interpretation. A scoping argument aligned with capability-control approaches to AI safety: narrower model surface, clearer accountability, lower harm ceiling.
 
-**Lamb NJ.** *Validation of an AI-powered mobile application for personalizing medical note explanations.* medRxiv, 2025. [![DOI](https://img.shields.io/badge/DOI-10.1101/2025.09.17.25335707-orange)](https://doi.org/10.1101/2025.09.17.25335707) [![Preprint](https://img.shields.io/badge/Preprint-medRxiv-B61F1F)](https://www.medrxiv.org/content/10.1101/2025.09.17.25335707v1)
+**Lamb N.** *Validation of an AI-powered mobile application for personalizing medical note explanations: a mixed-methods evaluation.* Frontiers in Digital Health. 2026;8. [![DOI](https://img.shields.io/badge/DOI-10.3389/fdgth.2026.1771051-blue)](https://doi.org/10.3389/fdgth.2026.1771051) [![Open Access](https://img.shields.io/badge/Open_Access-CC_BY_4.0-green)](https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2026.1771051/full)
 
-> A three-phase validation of Patiently AI — computational readability metrics across 210 outputs, expert review by 15 clinicians, and a 54-patient survey — finding **87.3% of outputs rated clinically safe**, **70% patient preference** over standard notes, and Flesch–Kincaid grade level reduced by ~3. Empirical evidence for the "translation, not interpretation" thesis above, applied in a shipped product.
+> A peer-reviewed, three-phase validation of Patiently AI — computational readability metrics across 210 outputs, expert review by 15 healthcare professionals, and a survey of 54 patients and members of the public — finding **87.3% of expert safety assessments rated outputs clinically safe**, **70% patient preference** over the original notes, **98.1% comprehension accuracy**, and Flesch–Kincaid grade level reduced by 2.96 (10.57 → 7.61). Empirical evidence for the "translation, not interpretation" thesis above, applied in a shipped product.
 
 ## 🔧 Open Source — one verification standard, four production tools
 
@@ -130,7 +130,9 @@ Transforms complex medical notes into clear, patient-friendly language.
 **Approach:** constrained simplification to a target audience and reading level, gated so the model stays in *translation* — restating what the note already says, never crossing into diagnosis or new clinical interpretation.
 
 **5× Award Winner** — PMEA 2025 (Innovation & Patient Education), Communiqué 2025 Progress Award, HTN AI & Data 2025 (Highly Commended), Best Mobile App Awards.
+**Peer-reviewed validation** — [Frontiers in Digital Health, 2026](https://doi.org/10.3389/fdgth.2026.1771051): 87.3% of outputs rated clinically safe, 70% patient preference, 3 grade levels easier to read.
 
+[![Paper](https://img.shields.io/badge/Paper-Frontiers_in_Digital_Health-1A73E8?style=flat)](https://doi.org/10.3389/fdgth.2026.1771051)
 [![App Store](https://img.shields.io/badge/App_Store-0D96F6?style=flat&logo=app-store&logoColor=white)](https://apps.apple.com/app/patiently-ai/id6670164706)
 [![Play Store](https://img.shields.io/badge/Google_Play-34A853?style=flat&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=ai.patiently.app)
 [![Web App](https://img.shields.io/badge/Web_App-2A8B7F?style=flat&logo=pwa&logoColor=white)](https://getpatiently.ai)
