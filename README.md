@@ -33,7 +33,7 @@ The question connecting this work: **how do you keep an AI system inside the env
 
 ## 📄 Research
 
-**Lamb NJ.** *Observer Zero: Do LLM Agents Form Epistemic Communities?* Under review at JASSS. [![DOI](https://img.shields.io/badge/preprint-10.5281/zenodo.21906653-blue)](https://doi.org/10.5281/zenodo.21906653) [![CoMSES](https://img.shields.io/badge/model-CoMSES_Library-6E56CF)](https://www.comses.net/codebases/f5ff1550-0393-4505-a4d8-96b779944a8d/releases/1.0.0/) [![GitHub](https://img.shields.io/badge/GitHub-observer--zero-181717?logo=github&logoColor=white)](https://github.com/nickjlamb/observer-zero)
+**Lamb NJ.** *Observer Zero: Do LLM Agents Form Epistemic Communities?* [![DOI](https://img.shields.io/badge/preprint-10.5281/zenodo.21906653-blue)](https://doi.org/10.5281/zenodo.21906653) [![CoMSES](https://img.shields.io/badge/model-CoMSES_Library-6E56CF)](https://www.comses.net/codebases/f5ff1550-0393-4505-a4d8-96b779944a8d/releases/1.0.0/) [![GitHub](https://img.shields.io/badge/GitHub-observer--zero-181717?logo=github&logoColor=white)](https://github.com/nickjlamb/observer-zero)
 
 > An instrumented artificial world for studying how societies of LLM agents do science — fictional physics they can't pattern-match from training data, secret interventions, and perfect ground truth on the experimenter's side. Across 235 runs &mdash; 85 of them pre-registered and frozen before any confirmatory data were seen &mdash; agents detected a hidden change of law in 90–100% of intervention worlds but **correctly diagnosed it in 0 of 40 opportunities**; grounded societies produced zero voluntary communications, and 18 of 20 unsupported claims from a seeded communicator were absorbed by other agents unchallenged.
 
