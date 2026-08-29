@@ -4,7 +4,7 @@
   RSI Loop and LitRAG are concept implementations — pin only if a slot is free.
 -->
 
-# Hi, I'm Nick Lamb 👋
+# Hi, I'm Nick 👋
 
 ***I build AI systems that verify before they generate.***
 
