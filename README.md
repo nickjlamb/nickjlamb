@@ -3,6 +3,11 @@
     1. opengate   2. pubcrawl   3. redacta   4. studydiff
   RSI Loop and LitRAG are concept implementations — pin only if a slot is free.
 -->
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+<img alt="Nick Lamb — I build AI systems that verify before they generate. 3,000+ downloads a month · 2 connectors in Anthropic's MCP Directory · 3 peer-reviewed papers · 5× awards for Patiently AI" src="assets/header-light.svg" width="100%">
+</picture>
+
 
 # Hi, I'm Nick 👋
 
