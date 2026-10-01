@@ -11,8 +11,6 @@
 
 # Hi, I'm Nick 👋
 
-***I build AI systems that verify before they generate.***
-
 **Applied AI engineer** working on LLM systems for healthcare — verification, regulatory review, patient communication. Particularly interested in constraining model behaviour to reduce harm in high-stakes domains (the subject of my recent publications, below). Founder of [PharmaTools.AI](https://pharmatools.ai), a suite of production AI tools used by clinicians, medical writers, and patients.
 
 **Highlights:** built a deterministic verification standard ([OpenGATE](https://github.com/nickjlamb/opengate)) · 3,000+ downloads/month across the open-source suite · 2 connectors in [Anthropic's MCP Directory](https://claude.ai/directory/connectors/ant.dir.gh.nickjlamb.redacta) · peer-reviewed publications on capability-constrained LLMs (SN Comprehensive Clinical Medicine) and their clinical validation (Frontiers in Digital Health) · self-hosted Kubernetes deployment for clinical-text privacy
