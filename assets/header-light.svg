@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="280" viewBox="0 0 1060 280" role="img" aria-labelledby="t d">
+<title id="t">Nick Lamb — Applied AI engineer</title>
+<desc id="d">I build AI systems that verify before they generate. 3,000+ downloads a month, 2 connectors in Anthropic's MCP Directory, 3 peer-reviewed papers, 5 awards for Patiently AI.</desc>
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1a7f64"/><stop offset="1" stop-color="#0969da"/></linearGradient>
+<clipPath id="r"><rect width="1060" height="280" rx="14"/></clipPath>
+<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#d0d7de"/></pattern></defs>
+<g clip-path="url(#r)"><rect width="1060" height="280" fill="#ffffff"/>
+<rect x="646" y="0" width="414" height="280" fill="url(#dots)" opacity="0.55"/>
+<rect width="1060" height="5" fill="url(#g)"/></g>
+<rect x="0.5" y="0.5" width="1059" height="279" rx="13.5" fill="none" stroke="#d0d7de"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<text x="44" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" letter-spacing="1.6" fill="#1a7f64">APPLIED AI ENGINEER · PHARMATOOLS.AI</text>
+<text x="42" y="112" font-size="46" font-weight="700" fill="#1f2328" letter-spacing="-0.8">Nick Lamb</text>
+<text x="44" y="150" font-size="20" font-weight="600" fill="#1f2328">I build AI systems that <tspan fill="#1a7f64">verify</tspan> before they generate.</text>
+<text x="44" y="178" font-size="15" fill="#59636e">LLM systems for healthcare: verification, regulatory review, patient communication</text>
+<rect x="44" y="206" width="82" height="28" rx="14" fill="#eef7f3" stroke="#b7dfcf"/>
+<text x="85" y="225" font-size="13" font-weight="600" text-anchor="middle" fill="#1a7f64">OpenGATE</text>
+<rect x="134" y="206" width="82" height="28" rx="14" fill="#eef7f3" stroke="#b7dfcf"/>
+<text x="175" y="225" font-size="13" font-weight="600" text-anchor="middle" fill="#1a7f64">PubCrawl</text>
+<rect x="224" y="206" width="75" height="28" rx="14" fill="#eef7f3" stroke="#b7dfcf"/>
+<text x="261.5" y="225" font-size="13" font-weight="600" text-anchor="middle" fill="#1a7f64">Redacta</text>
+<rect x="307" y="206" width="89" height="28" rx="14" fill="#eef7f3" stroke="#b7dfcf"/>
+<text x="351.5" y="225" font-size="13" font-weight="600" text-anchor="middle" fill="#1a7f64">StudyDiff</text>
+<rect x="404" y="206" width="111" height="28" rx="14" fill="#eef7f3" stroke="#b7dfcf"/>
+<text x="459.5" y="225" font-size="13" font-weight="600" text-anchor="middle" fill="#1a7f64">Patiently AI</text>
+<rect x="672" y="34" width="172" height="100" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+<rect x="672" y="52" width="3" height="30" rx="1.5" fill="#1a7f64"/>
+<text x="688" y="78" font-size="30" font-weight="700" fill="#1f2328" letter-spacing="-0.5">3,000+</text>
+<text x="688" y="102" font-size="12.5" fill="#59636e">downloads a month</text>
+<text x="688" y="119" font-size="12.5" font-weight="600" fill="#59636e">open-source suite</text>
+<rect x="856" y="34" width="172" height="100" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+<rect x="856" y="52" width="3" height="30" rx="1.5" fill="#1a7f64"/>
+<text x="872" y="78" font-size="30" font-weight="700" fill="#1f2328" letter-spacing="-0.5">2</text>
+<text x="872" y="102" font-size="12.5" fill="#59636e">connectors in Anthropic&#8217;s</text>
+<text x="872" y="119" font-size="12.5" font-weight="600" fill="#59636e">MCP Directory</text>
+<rect x="672" y="146" width="172" height="100" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+<rect x="672" y="164" width="3" height="30" rx="1.5" fill="#1a7f64"/>
+<text x="688" y="190" font-size="30" font-weight="700" fill="#1f2328" letter-spacing="-0.5">3</text>
+<text x="688" y="214" font-size="12.5" fill="#59636e">peer-reviewed</text>
+<text x="688" y="231" font-size="12.5" font-weight="600" fill="#59636e">papers published</text>
+<rect x="856" y="146" width="172" height="100" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+<rect x="856" y="164" width="3" height="30" rx="1.5" fill="#1a7f64"/>
+<text x="872" y="190" font-size="30" font-weight="700" fill="#1f2328" letter-spacing="-0.5">5×</text>
+<text x="872" y="214" font-size="12.5" fill="#59636e">awards won by</text>
+<text x="872" y="231" font-size="12.5" font-weight="600" fill="#59636e">Patiently AI</text>
+</g></svg>
