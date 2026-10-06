@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1060" height="280" viewBox="0 0 1060 280" role="img" aria-labelledby="t d">
 <title id="t">Nick Lamb: I build AI systems that verify before they generate</title>
-<desc id="d">3,000+ downloads a month, 2 listings in Anthropic's MCP Directory, 3 peer-reviewed papers, 5 awards for Patiently AI.</desc>
+<desc id="d">8,400+ downloads since July 2026, 2 listings in Anthropic's MCP Directory, 3 peer-reviewed papers, 5 awards for Patiently AI.</desc>
 <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1a7f64"/><stop offset="1" stop-color="#0969da"/></linearGradient>
 <clipPath id="r"><rect width="1060" height="280" rx="14"/></clipPath>
 <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#d0d7de"/></pattern></defs>
@@ -25,9 +25,9 @@
 <text x="526.5" y="239.5" font-size="15" font-weight="600" text-anchor="middle" fill="#1a7f64">Patiently AI</text>
 <rect x="664" y="28" width="176" height="106" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
 <rect x="664" y="44" width="4" height="34" rx="2" fill="#1a7f64"/>
-<text x="682" y="74" font-size="34" font-weight="700" fill="#1f2328" letter-spacing="-0.5">3,000+</text>
+<text x="682" y="74" font-size="34" font-weight="700" fill="#1f2328" letter-spacing="-0.5">8,400+</text>
 <text x="682" y="100" font-size="16.5" fill="#59636e">downloads</text>
-<text x="682" y="121" font-size="16.5" font-weight="600" fill="#59636e">a month</text>
+<text x="682" y="121" font-size="16.5" font-weight="600" fill="#59636e">since Jul 2026</text>
 <rect x="850" y="28" width="176" height="106" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
 <rect x="850" y="44" width="4" height="34" rx="2" fill="#1a7f64"/>
 <text x="868" y="74" font-size="34" font-weight="700" fill="#1f2328" letter-spacing="-0.5">2</text>
